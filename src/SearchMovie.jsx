@@ -21,7 +21,6 @@ const SearchMovie = () => {
 
         setMovies(data.Search);
 
-        console.log(movies);
     }
 
 
@@ -48,7 +47,7 @@ const SearchMovie = () => {
                 ? (
                     <div className="container">
                         {
-                            movies.map((movie) => (<MovieCard movie={movie} />))
+                            movies.map((movie) => (<MovieCard key={movie.imdbID} movie={movie} />))
                         }
                     </div>
                 ) : (
