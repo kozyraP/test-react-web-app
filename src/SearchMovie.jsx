@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
 
+import "./App.css";
+import NavBar from "./NavBar";
 
 
 const API_KEY = "e0720afa";
@@ -30,16 +32,19 @@ const SearchMovie = () => {
 
     return (
         <>
+        <NavBar />
+        <div className="app">
+            <h1>Search Movie App !!!</h1>
             <div className="search">
                 <input
                     placeholder="Search for a movie"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    onKeyDown={(e) => { 
-                        if (e.key === "Enter") { 
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
                             searchMovies(search)
-                        } 
-                    }} 
+                        }
+                    }}
                 />
                 <img
                     src={SearchIcon}
@@ -62,8 +67,9 @@ const SearchMovie = () => {
                 )
             }
 
+        </div>
         </>
-        );
+    );
 }
 
 export default SearchMovie;
