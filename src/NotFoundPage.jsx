@@ -6,6 +6,7 @@ const NotFoundPage = () => {
         <>
             <NavBar />
             <h1>404 - Not Found</h1>
+            <p>Dupa dupa dupa</p>
             <Link to="/">Go Home</Link>
         </>
     );
